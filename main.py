@@ -4,6 +4,11 @@ import os
 
 register_heif_opener()
 
+if not os.path.exists("inputs"):
+    os.makedirs("inputs")
+if not os.path.exists("outputs"):
+    os.makedirs("outputs")
+
 files = [i for i in os.listdir("inputs") if i.endswith(".HEIC") or i.endswith(".heic")]
 
 for i in files:
